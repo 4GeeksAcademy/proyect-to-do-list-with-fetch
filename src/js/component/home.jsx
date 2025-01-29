@@ -1,6 +1,6 @@
 import React, {createRef, useEffect, useState} from "react";
 //include images into your bundle
-import rigoImage from "../../img/task.jpg";
+
 
 const inicialTask = {
 	label:"",
@@ -93,13 +93,11 @@ const Home = () => {
 	return (
 		
 		<div className="container text-center">
-			    <p>
-				  <img src={rigoImage} />
-			    </p>
-
+			   
+			 
 			<div className="text-center row">
 				<div className="text-center col-12 col-md-7">
-			      <h1 className="">List of task.</h1>
+			      <h1 className="">List of tasks.</h1>
 				  <form onSubmit={(event) => event.preventDefault()}>
 					<input
 					type="text"
@@ -119,7 +117,7 @@ const Home = () => {
 					     taskList.map((item) => (
 						    <div key={item.id} className="class">
 							      {item.label}
-							 <span><button OnClick= { ( ) => deleteTask (item.id) } > x </button>
+							 <span><button onClick= { ( ) => deleteTask (item.id) } > &#10060; </button>
 							 
 							 </span>
 						    </div>
@@ -135,4 +133,5 @@ const Home = () => {
 };
 
 export default Home;
+
 
